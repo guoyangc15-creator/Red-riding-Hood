@@ -1,0 +1,25 @@
+PASS 三组权重分别合计100
+PASS 当前目标权重在页面可见
+PASS 分数在0到100且贡献求和与总分一致
+PASS 相同需求仅切目标产生三种排序，不是随机洗牌
+PASS 页面切目标立即重排并同步需求
+PASS 目标切换保留名单但重置旧文案
+PASS 未知人群使用中性分而不假装匹配
+PASS 手动搜索入口可用且保留原需求
+PASS 按名称搜索推荐Top4外候选
+PASS 搜索结果可加入且与原名单合并
+PASS 无结果有明确兜底且搜索输入不执行HTML
+PASS 支持按内容形式关键词搜索
+PASS 无预算内结果不自动放宽价格
+PASS 放宽筛选后超总预算者可看但禁止加入
+PASS 相似结果排除自身、保持品类与预算
+PASS 相似分和推荐分分别展示
+PASS 选择价格更近后重算相似结果
+PASS 相似度边界及对称性
+PASS 多人名单超预算仍拦截材料页
+PASS 英文Brief使用最新目标且无中文混入
+PASS 编辑后的Brief完整进入导出
+PASS 返回改需求刷新候选且清理失效名单
+PASS 没有脚本运行错误
+
+Scope: jsdom DOM/logic. Blob downloads mocked. Real-browser checks reported separately.

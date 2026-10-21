@@ -1,0 +1,18 @@
+PASS 默认是真实资料库且4位真人均有来源、商务入口和核对日期
+PASS 真实推荐不混入虚构卡片或虚构指标
+PASS 姓名搜索定位真实资料且保留需求
+PASS 相似入口有真实结果且排除自身
+PASS 未知报价不当作免费或预算通过
+PASS 录入报价后立即更新预算并拦截超额
+PASS 预算内报价与未知数量正确
+PASS 无效报价不能沿用旧金额继续
+PASS 删除报价恢复待询价而非0美元报价
+PASS 英文询价区分UGC与账号发布且不虚构价格
+PASS 真人商务邮箱预填且达人材料隔离
+PASS 实际只生成mock回执，不进行真实发送
+PASS 导出含最后编辑的三种材料、独立Brief、报价状态与来源
+PASS 切换演示库清空名单、材料且彻底隔离真人
+PASS 修改需求更新真实资料相关度，明确彩妆大类证据边界
+PASS 没有脚本错误
+
+Scope: jsdom DOM/logic. Clipboard/download delivery and mock receipt inspected; no actual email.

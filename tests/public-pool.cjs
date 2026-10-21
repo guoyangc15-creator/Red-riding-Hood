@@ -1,4 +1,3 @@
-// 仅用于 2027 校园招聘，未经许可不得用于其他用途。
 const {JSDOM,VirtualConsole}=require('jsdom'),fs=require('fs'),path=require('path'),assert=require('assert/strict');
 const errors=[],checks=[],root=path.resolve(__dirname,'..');let downloaded='';
 const vc=new VirtualConsole();vc.on('jsdomError',e=>errors.push(e.message));

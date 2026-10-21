@@ -1,0 +1,142 @@
+{
+  "checkedAt": "2026-10-21",
+  "provenance": "创作者自发布公开网页；非平台认证，不含实时效果数据",
+  "restriction": "仅用于 2027 校园招聘，未经许可不得用于其他用途",
+  "creators": [
+    {
+      "id": "r01",
+      "real": true,
+      "name": "Diane Taha",
+      "handle": "@dianetaha",
+      "location": "地区待确认",
+      "us": false,
+      "fee": null,
+      "followers": null,
+      "cats": [
+        "护肤",
+        "彩妆（细分待确认）"
+      ],
+      "formats": [
+        "产品体验分享",
+        "场景化种草"
+      ],
+      "angle": [],
+      "aud": [],
+      "style": "美妆与生活方式短视频、产品体验内容",
+      "evidence": "个人网站列出护肤、彩妆与 TikTok/Reels 短视频服务。具体底妆、唇妆项目需再核对。",
+      "scope": "公开提供短视频制作；TikTok 本人账号发布待确认",
+      "email": "diane@stylecontext.com",
+      "source": "https://dianetaha.com/",
+      "profile": "https://www.tiktok.com/@dianetaha/video/7150013452600233258",
+      "profileLabel": "网站所链 TikTok 作品",
+      "extraSources": [],
+      "rateNote": "未找到本次 TikTok 账号发布的公开报价。",
+      "checked": "2026-10-21",
+      "color": "#e3eacb"
+    },
+    {
+      "id": "r02",
+      "real": true,
+      "name": "Rita Almusa",
+      "handle": "@RitaAlmusa",
+      "location": "Austin, Texas（网站自述）",
+      "us": true,
+      "fee": null,
+      "followers": null,
+      "cats": [
+        "护肤",
+        "底妆"
+      ],
+      "formats": [
+        "产品体验分享"
+      ],
+      "angle": [
+        "使用方法"
+      ],
+      "aud": [],
+      "style": "护肤产品评测与底妆教程",
+      "evidence": "个人网站展示护肤评测、底妆教程，并提供 TikTok 账号和品牌合作入口。",
+      "scope": "可提出 TikTok 合作询价；具体发布服务待确认",
+      "email": "ritaalmusabeauty@gmail.com",
+      "source": "https://www.ritaalmusa.com/",
+      "profile": "https://tiktok.com/@RitaAlmusa",
+      "profileLabel": "网站所链 TikTok 账号",
+      "extraSources": [],
+      "rateNote": "未找到本次 TikTok 账号发布的公开报价。",
+      "checked": "2026-10-21",
+      "color": "#f0dfcc"
+    },
+    {
+      "id": "r03",
+      "real": true,
+      "name": "Marta Dexnis",
+      "handle": "公开 UGC 作品集",
+      "location": "Miami, Florida（网站自述）",
+      "us": true,
+      "fee": null,
+      "followers": null,
+      "cats": [
+        "护肤",
+        "彩妆（细分待确认）"
+      ],
+      "formats": [
+        "产品体验分享",
+        "开箱",
+        "场景化种草"
+      ],
+      "angle": [
+        "产品质地",
+        "使用方法",
+        "实际使用场景"
+      ],
+      "aud": [],
+      "style": "美妆 UGC、质地与使用场景、开箱及广告素材",
+      "evidence": "个人网站提供美妆 UGC 作品及质地、使用中照片；首页列出开箱和使用演示。底妆、唇妆归入彩妆大类，细分项目需确认。",
+      "scope": "公开服务以 UGC 素材制作为主；Instagram 发布选项不等于 TikTok 发布",
+      "email": "marta.dexnis.ugc@gmail.com",
+      "source": "https://martadexnis.com/beauty-ugc-creator",
+      "profile": "https://martadexnis.com/",
+      "profileLabel": "服务与作品集首页",
+      "extraSources": [
+        "https://martadexnis.com/"
+      ],
+      "rateNote": "网站要求询价；没有可用于本次 TikTok 发布预算的公开报价。",
+      "checked": "2026-10-21",
+      "color": "#d8e5e8"
+    },
+    {
+      "id": "r04",
+      "real": true,
+      "name": "Ji Imany",
+      "handle": "@ji.ugc",
+      "location": "美国（作品集自述）",
+      "us": true,
+      "fee": null,
+      "followers": null,
+      "cats": [
+        "护肤",
+        "彩妆（细分待确认）"
+      ],
+      "formats": [
+        "产品体验分享",
+        "开箱",
+        "场景化种草"
+      ],
+      "angle": [
+        "使用方法"
+      ],
+      "aud": [],
+      "style": "护肤与彩妆 UGC，配音、开箱、产品演示",
+      "evidence": "个人作品集列出护肤、彩妆、配音、开箱、产品演示与评测。底妆、唇妆归入彩妆大类，细分项目需确认。",
+      "scope": "公开 UGC 制作服务；TikTok 本人账号发布待确认",
+      "email": "jiyraimany@gmail.com",
+      "source": "https://jiugc.my.canva.site/portfolio",
+      "profile": "https://www.tiktok.com/@ji.ugc?is_from_webapp=1&sender_device=pc",
+      "profileLabel": "作品集所链 TikTok 账号",
+      "extraSources": [],
+      "rateNote": "作品集列有 UGC 视频方案 $150 / $375；交付数量、有效期及授权需本人确认，不能当作 TikTok 账号发布报价。",
+      "checked": "2026-10-21",
+      "color": "#eadfe9"
+    }
+  ]
+}

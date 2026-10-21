@@ -2,7 +2,7 @@
 const {JSDOM,VirtualConsole}=require('jsdom'),fs=require('fs'),path=require('path'),assert=require('assert/strict');
 const root=path.resolve(__dirname,'..'),results=[],errors=[];let exported='';
 const vc=new VirtualConsole();vc.on('jsdomError',e=>errors.push(e.message));
-const dom=new JSDOM(fs.readFileSync(path.join(root,'index.html'),'utf8'),{url:'https://demo.test',runScripts:'dangerously',virtualConsole:vc,beforeParse(w){w.scrollTo=()=>{};w.Blob=class{constructor(parts){this.parts=parts}};w.URL.createObjectURL=b=>(exported=b.parts.join(''),'blob:test');w.URL.revokeObjectURL=()=>{};w.HTMLAnchorElement.prototype.click=()=>{};}});
+const dom=new JSDOM(fs.readFileSync(path.join(root,'index.html'),'utf8'),{url:'https://demo.test',runScripts:'dangerously',virtualConsole:vc,beforeParse(w){w.localStorage.setItem('redhood-v3-public',JSON.stringify({mode:'demo'}));w.scrollTo=()=>{};w.Blob=class{constructor(parts){this.parts=parts}};w.URL.createObjectURL=b=>(exported=b.parts.join(''),'blob:test');w.URL.revokeObjectURL=()=>{};w.HTMLAnchorElement.prototype.click=()=>{};}});
 const w=dom.window,d=w.document,$=s=>d.querySelector(s),click=s=>{assert.ok($(s),s);$(s).click()},fill=(s,v)=>{$(s).value=v;$(s).dispatchEvent(new w.Event('input',{bubbles:true}))},change=(s,v)=>{$(s).value=v;$(s).dispatchEvent(new w.Event('change',{bubbles:true}))},submit=s=>$(s).dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));
 const test=(name,fn)=>{fn();results.push('PASS '+name)},ids=()=>[...d.querySelectorAll('[data-card]')].map(x=>x.dataset.card).join(',');
 click('#exampleBtn');submit('#briefForm');const sample={...w.demo.getState().form};
@@ -14,7 +14,7 @@ const initial=ids();change('#recommendationGoal','提升品牌知名度');test('
 change('#recommendationGoal','推广新品');click('[data-toggle="c01"]');change('#recommendationGoal','促进购买');test('目标切换保留名单但重置旧文案',()=>{assert.ok(w.demo.getState().selected.includes('c01'));assert.deepEqual(Object.keys(w.demo.getState().edits),[]);});
 test('未知人群使用中性分而不假装匹配',()=>{const c=w.demo.scoreCreator(w.demo.creators[0],{...sample,audience:'无法识别的画像'});assert.equal(c.dimensions.audience,50);});
 click('[data-discover="search"]');test('手动搜索入口可用且保留原需求',()=>{assert.equal(w.demo.getDiscovery().mode,'search');assert.equal(w.demo.getState().form.category,'护肤');assert.ok($('.discovery').textContent.includes('12位虚构'));});
-fill('#creatorQuery','Nora');submit('#discoveryForm');test('按名称搜索推荐Top4外候选',()=>{assert.equal(ids(),'c02');});click('[data-toggle="c02"]');test('搜索结果可加入且与原名单合并',()=>{assert.ok(w.demo.getState().selected.includes('c01'));assert.ok(w.demo.getState().selected.includes('c02'));});
+fill('#creatorQuery','Nora');submit('#discoveryForm');test('按名称搜索指定达人',()=>{assert.equal(ids(),'c02');});click('[data-toggle="c02"]');test('搜索结果可加入且与原名单合并',()=>{assert.ok(w.demo.getState().selected.includes('c01'));assert.ok(w.demo.getState().selected.includes('c02'));});
 fill('#creatorQuery','<img src=x onerror=alert(1)>');submit('#discoveryForm');test('无结果有明确兜底且搜索输入不执行HTML',()=>{assert.equal(ids(),'');assert.ok($('.empty'));assert.equal(d.querySelectorAll('.discovery img').length,0);});
 click('#resetSearch');fill('#creatorQuery','vlog');submit('#discoveryForm');test('支持按内容形式关键词搜索',()=>{assert.ok(ids());assert.ok(w.demo.discoveryResults().every(c=>c.formats.includes('vlog')));});
 click('#resetSearch');fill('#searchMaxFee','100');submit('#discoveryForm');test('无预算内结果不自动放宽价格',()=>{assert.equal(ids(),'');assert.equal(w.demo.getDiscovery().maxFee,'100');});

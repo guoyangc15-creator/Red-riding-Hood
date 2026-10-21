@@ -1,0 +1,9 @@
+PASS 1800美元新品方案为4位，费用1600且预算相等
+PASS 目标变化同步组合、实际评分及报告说明
+PASS 逐项贡献与当前真实排序一致，未把未知触达补成数字
+PASS 修改预算后缩减组合，未知形式移除后正确归一化
+PASS 预算边界均不超额，不以行业均价承诺签约
+PASS 下载报告采用最新预算/目标/公式/来源，规划价不写入真人报价
+PASS 报告及原流程没有脚本错误
+
+Scope: jsdom DOM/logic; download Blob mocked. Live browser checks separately.

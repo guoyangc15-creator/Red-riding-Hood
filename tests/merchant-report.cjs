@@ -1,4 +1,3 @@
-// 仅用于 2027 校园招聘，未经许可不得用于其他用途。
 const {JSDOM,VirtualConsole}=require('jsdom'),fs=require('fs'),path=require('path'),assert=require('assert/strict');
 const root=path.resolve(__dirname,'..'),checks=[],errors=[];let fileText='';const vc=new VirtualConsole();vc.on('jsdomError',e=>errors.push(e.message));
 const dom=new JSDOM(fs.readFileSync(path.join(root,'index.html'),'utf8'),{url:'https://test.local',runScripts:'dangerously',virtualConsole:vc,beforeParse(w){w.scrollTo=()=>{};w.Blob=class{constructor(parts){this.parts=parts}};w.URL.createObjectURL=b=>(fileText=b.parts.join(''),'blob:test');w.URL.revokeObjectURL=()=>{};w.HTMLAnchorElement.prototype.click=()=>{}}});

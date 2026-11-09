@@ -1,0 +1,38 @@
+PASS overview renders
+PASS three distinct decisions
+PASS goal changes example ranking
+PASS paid use excludes explicit refusal
+PASS unknown evidence stays unknown
+PASS unknown quote is not zero
+PASS paid creation excludes natural reach weight
+PASS combined shortlist over budget blocked
+PASS all materials export preserves edits
+PASS copy uses edited materials
+PASS material download emits Blob
+PASS need changes preserve edits and flag review
+PASS image notes do not use video completion
+PASS media budget overrun blocked live
+PASS license overrun blocked live
+PASS fractional days rejected
+PASS past start rejected
+PASS plan copy preserves edited text
+PASS plan download emits Blob
+PASS explicit confirmation marks simulated plan
+PASS revoked rights invalidate confirmed plan
+PASS content fit separated from authorization
+PASS authorization prevents ready state
+PASS stale plan retains edited text
+PASS missing evidence gets insufficient-information state
+PASS optimized script supports test but rights still block
+PASS revised storyboard evidence updates
+PASS same asset reassessed for new goal
+PASS lifestyle engagement not purchase evidence
+PASS unrecognized audience is unknown
+PASS unrecognized audience prevents confident diagnosis
+PASS empty project has actionable onboarding
+PASS explicit demo load adds content
+PASS reset is repeatable
+PASS retired recruitment notice absent
+PASS no API requests or common credential patterns
+PASS no runtime errors: 
+TOTAL 37 checks passed

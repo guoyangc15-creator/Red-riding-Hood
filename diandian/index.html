@@ -172,7 +172,7 @@ function renderGuidance(positionFeed=false){
  if(fresh||positionFeed){
   if(kind==='tour'&&W>960){x=Math.min(W-width-20,r.right+35);y=Math.max(95,Math.min(H-box.offsetHeight-30,r.top+15))}
   else if(kind==='continue'&&W>900){x=W-width-28;y=Math.max(95,Math.min(H-box.offsetHeight-125,r.top-box.offsetHeight-25))}
-  else if(kind==='home'&&W>900){x=Math.min(W-width-20,Math.max(20,r.left+60));y=Math.min(H-box.offsetHeight-25,r.bottom+46)}
+  else if(kind==='home'&&W>900){x=Math.min(W-width-20,Math.max(20,r.left+60));y=Math.min(H-box.offsetHeight-25,Math.max(330,dataMenuOpen?(document.querySelector('.data-menu')?.getBoundingClientRect().bottom||r.bottom)+20:330))}
   else{x=(W-width)/2;y=Math.max(96,H-box.offsetHeight-(kind==='tour'?80:kind==='continue'?145:25))}
   box.style.left=x+'px';box.style.top=y+'px';
  }else{x=parseFloat(box.style.left);y=parseFloat(box.style.top)}

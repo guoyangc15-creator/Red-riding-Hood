@@ -373,12 +373,12 @@ function performanceAction(action,source){
 }
 function installPerformanceEvents(){
  document.addEventListener('pointerover',e=>{const point=e.target.closest('.report-chart-point');if(point&&!point.contains(e.relatedTarget))showChartTooltip(point);const help=e.target.closest('.metric-info');if(help&&!help.contains(e.relatedTarget))showMetricHelp(help);const feature=e.target.closest('.feature-new[data-feature-new]');if(feature&&!feature.contains(e.relatedTarget)){clearTimeout(featureHoverTimer);featureHoverTimer=setTimeout(()=>{if(feature.isConnected)openFeature(feature.dataset.featureNew)},350)}});
- document.addEventListener('pointerout',e=>{const point=e.target.closest('.report-chart-point');if(point&&!point.contains(e.relatedTarget))hideChartTooltip();const help=e.target.closest('.metric-info');if(help&&!help.contains(e.relatedTarget))hideMetricHelp();const feature=e.target.closest('.feature-new[data-feature-new]');if(feature&&!feature.contains(e.relatedTarget))clearTimeout(featureHoverTimer)});
+ document.addEventListener('pointerout',e=>{const point=e.target.closest('.report-chart-point');if(point&&!point.contains(e.relatedTarget)&&!point.matches(':focus'))hideChartTooltip();const help=e.target.closest('.metric-info');if(help&&!help.contains(e.relatedTarget))hideMetricHelp();const feature=e.target.closest('.feature-new[data-feature-new]');if(feature&&!feature.contains(e.relatedTarget))clearTimeout(featureHoverTimer)});
  document.addEventListener('focusin',e=>{if(e.target.matches('.report-chart-point'))showChartTooltip(e.target);if(e.target.matches('.metric-info'))showMetricHelp(e.target)});
  document.addEventListener('focusout',e=>{if(e.target.matches('.report-chart-point'))hideChartTooltip();if(e.target.matches('.metric-info'))hideMetricHelp()});
  document.addEventListener('click',e=>{const point=e.target.closest('.report-chart-point');if(point){point.focus();showChartTooltip(point)}else hideChartTooltip();if(!e.target.closest('.metric-info'))hideMetricHelp()});
  document.addEventListener('keydown',e=>{if(e.key==='Escape'){hideMetricHelp();hideChartTooltip()}});
- document.addEventListener('scroll',()=>{hideMetricHelp();hideChartTooltip()},true);window.addEventListener('resize',()=>{hideMetricHelp();hideChartTooltip()});
+ document.addEventListener('scroll',()=>{hideMetricHelp();const point=document.querySelector('.report-chart-point:focus'),r=point?.getBoundingClientRect();if(point&&document.getElementById('chart-floating-tip')&&r.top>=0&&r.bottom<=window.innerHeight)showChartTooltip(point);else hideChartTooltip()},true);window.addEventListener('resize',()=>{hideMetricHelp();hideChartTooltip()});
 }
 
 
